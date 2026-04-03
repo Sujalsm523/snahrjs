@@ -1,0 +1,116 @@
+.product-detail__container {
+  padding-top: 2rem;
+  padding-bottom: 4rem;
+}
+
+.product-detail__back {
+  margin-bottom: 2rem;
+  display: inline-flex;
+}
+
+.product-detail__not-found {
+  margin-bottom: 1rem;
+  color: var(--text-secondary);
+}
+
+.product-detail__card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(2rem, 5vw, 4rem);
+  align-items: start;
+}
+
+.product-detail__img-wrap {
+  position: sticky;
+  top: 100px;
+  aspect-ratio: 3 / 4;
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+}
+
+.product-detail__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.product-detail__content {
+  padding-top: 0.5rem;
+}
+
+.product-detail__tagline {
+  font-size: 0.85rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 0.5rem;
+}
+
+.product-detail__name {
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  margin-bottom: 1rem;
+}
+
+.product-detail__desc {
+  color: var(--text-secondary);
+  margin-bottom: 2rem;
+  line-height: 1.7;
+}
+
+.product-detail__notes h3 {
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+}
+
+.product-detail__notes-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+}
+
+.product-detail__note {
+  display: flex;
+  gap: 1rem;
+  padding: 0.75rem 1rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+.product-detail__note-label {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--accent);
+  min-width: 4rem;
+}
+
+.product-detail__note-value {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.product-detail__price {
+  font-family: var(--font-display);
+  font-size: 1.75rem;
+  font-weight: 500;
+  color: var(--accent);
+}
+
+@media (max-width: 900px) {
+  .product-detail__card {
+    grid-template-columns: 1fr;
+  }
+
+  .product-detail__img-wrap {
+    position: static;
+    max-width: 400px;
+    margin-inline: auto;
+  }
+}

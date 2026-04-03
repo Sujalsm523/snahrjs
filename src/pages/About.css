@@ -1,0 +1,51 @@
+.about__hero {
+  text-align: center;
+  padding-bottom: 2rem;
+}
+
+.about__title {
+  font-size: clamp(2.5rem, 7vw, 4rem);
+  margin-bottom: 0.5rem;
+}
+
+.about__tagline {
+  font-size: 1.15rem;
+  color: var(--accent);
+  letter-spacing: 0.02em;
+}
+
+.about__container {
+  max-width: 720px;
+  margin-inline: auto;
+}
+
+.about__block {
+  margin-bottom: 2.5rem;
+}
+
+.about__block h2 {
+  font-size: 1.35rem;
+  margin-bottom: 0.75rem;
+  color: var(--text-primary);
+}
+
+.about__block p {
+  color: var(--text-secondary);
+  line-height: 1.75;
+}
+
+.about__positioning {
+  margin-top: 3rem;
+  padding: 2rem;
+  text-align: center;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--bg-card);
+}
+
+.about__positioning-text {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-style: italic;
+  color: var(--accent);
+}
