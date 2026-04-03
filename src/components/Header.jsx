@@ -1,29 +1,35 @@
-import { useState } from 'react'
-import { Link, useLocation } from 'react-router-dom'
-import './Header.css'
+import { useState } from "react";
+import { Link, useLocation } from "react-router-dom";
+import "./Header.css";
 
 const navLinks = [
-  { to: '/', label: 'Home' },
-  { to: '/collection', label: 'Collection' },
-  { to: '/about', label: 'About' },
-]
+  { to: "/", label: "Home" },
+  { to: "/collection", label: "Collection" },
+  { to: "/about", label: "About" },
+];
 
 export default function Header() {
-  const [menuOpen, setMenuOpen] = useState(false)
-  const location = useLocation()
+  const [menuOpen, setMenuOpen] = useState(false);
+  const location = useLocation();
 
   return (
-    <header className={`header ${menuOpen ? 'header--menu-open' : ''}`}>
+    <header className={`header ${menuOpen ? "header--menu-open" : ""}`}>
       <div className="header__inner container">
-        <Link to="/" className="header__logo" onClick={() => setMenuOpen(false)}>
-          SNAHRJS
+        <Link
+          to="/"
+          className="header__logo"
+          onClick={() => setMenuOpen(false)}
+        >
+          SNAJHRS
         </Link>
-        <nav className={`header__nav ${menuOpen ? 'header__nav--open' : ''}`}>
+        <nav className={`header__nav ${menuOpen ? "header__nav--open" : ""}`}>
           {navLinks.map(({ to, label }) => (
             <Link
               key={to}
               to={to}
-              className={`header__link ${location.pathname === to ? 'header__link--active' : ''}`}
+              className={`header__link ${
+                location.pathname === to ? "header__link--active" : ""
+              }`}
               onClick={() => setMenuOpen(false)}
             >
               {label}
@@ -42,5 +48,5 @@ export default function Header() {
         </button>
       </div>
     </header>
-  )
+  );
 }
